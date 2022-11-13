@@ -1,0 +1,20 @@
+<div>
+<form method="post" action="/contact-us">
+    <button type="button" onclick="contactUs()">联系我们</button>
+    <label>
+<textarea name="contact-us-msg" id="contact-us-msg">
+</textarea>
+    </label>
+</form>
+<script>
+    function contactUs() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            alert(xhttp.responseText)
+        }
+        xhttp.open("POST", "contact-us");
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("contact-us-msg=" + document.getElementById("contact-us-msg").value);
+    }
+</script>
+</div>
