@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  http-basic-auth:
+  web-app-example:
     image: nginx:1.22.1-alpine
     volumes:
       - /home/vulab/web-app-example/conf.d:/etc/nginx/conf.d
